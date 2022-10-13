@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import {housesData} from './data';
+import HouseList from './HouseList';
+import {useEffect,useState,useRef} from 'react';
+import FilteredHouseList from './FilteredHouseList';
+import Filters from './Filters';
+
 
 function App() {
+  const [data,setData] = useState(housesData);
+  const [filteredData,setFilteredData] = useState([]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <h1>Estatery</h1>
+        <p className="favorite">favourites</p>
       </header>
+      <Filters data={data} setData={setData} setFilteredData={setFilteredData}/>
+      <HouseList houseData={filteredData.length===0 ? data:filteredData}/>      
     </div>
   );
 }

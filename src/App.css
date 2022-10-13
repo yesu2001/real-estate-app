@@ -1,38 +1,172 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin: 10px 30px;
 }
 
-.App-link {
-  color: #61dafb;
+header {
+  padding: 10px 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header>h1 {
+  color: #3b357a;
 }
+
+.favorite{
+  color: #7467EF;
+  background: #E0D6F9;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.filters {
+  padding: 50px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.filters > div {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 30px;
+}
+
+label {
+  color: #9c99ba;
+  margin-bottom: 8px;
+}
+
+select,input {
+  width: 200px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  font-size: 18px;
+  color: #000929;
+  cursor: pointer;
+}
+
+input::placeholder {
+  color: #000929;
+}
+
+button {
+  width: 100px;
+  height: 50px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 8px;
+  background: #7467EF;
+  border: 1px solid #7467EF;
+  outline: none;
+  cursor: pointer;
+}
+
+.houses {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.house {
+  height: 450px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px 20px;
+  box-shadow: 0px 10px 13px 0px rgba(0,0,0,0.1);
+  transform: scale(1);
+  transition: 0.5s;
+}
+
+.house:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.house-image {
+  width: 350px;
+  height: 250px;
+}
+
+.details {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.amount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.amount b {
+  color: #7467EF;
+  font-size: 25px;
+}
+
+.amount > p {
+  display: flex;
+  align-items: center;
+  color: #9c99ba;
+}
+.amount>img {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.houseName {
+  color: #000929;
+}
+
+.address {
+  color: #9c99ba;
+  padding: 10px 0;
+}
+
+.features {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20px;
+  padding: 10px 0;
+}
+
+.features img {
+  width: 15px;
+  margin-right:8px;
+}
+
+.feature {
+  display: flex;
+  align-content: center;
+  margin-right: 15px;
+} 
+
+.feature p {
+  font-size: 13px;
+}
+
+/*
+purple
+#7467EF
+
+
+dark purple
+#000929
+
+light purple
+#E0D6F9
+*/
